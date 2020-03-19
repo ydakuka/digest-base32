@@ -1,15 +1,16 @@
-# Base32 Encoder/Decoder
+Digest::Base32
+==============
 
-![Travis Build](https://travis-ci.com/jamescook/soundx.svg?branch=master)
+![Travis Build](https://travis-ci.com/ydakuka/soundx.svg?branch=master)
 
-B32 is a Ruby native extension that wraps the base32 library found
+Digest::Base32 is a Ruby native extension that wraps the base32 library found
 in [tpmtotop](https://github.com/mjg59/tpmtotp/blob/master/base32.h)
 
 ### Usage
 ```ruby
-require 'b32'
-encoded = B32.encode('My string')
-decoded = B32.decode(encoded)
+require 'digest-base32'
+encoded = Digest::Base32.encode('My string')
+decoded = Digest::Base32.decode(encoded)
 ```
 
 ### Benchmark

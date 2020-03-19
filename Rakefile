@@ -1,8 +1,8 @@
 require 'rake/testtask'
 require 'rake/extensiontask'
 
-spec = Gem::Specification.load('b32.gemspec')
-Rake::ExtensionTask.new('b32', spec)
+spec = Gem::Specification.load('digest-base32.gemspec')
+Rake::ExtensionTask.new('digest/base32', spec)
 
 Rake::TestTask.new(test: [:clean, :clobber, :compile]) do |t|
   t.description = "Run unit tests"
@@ -17,4 +17,3 @@ task :benchmark do
 end
 
 task :default => ["test"]
-

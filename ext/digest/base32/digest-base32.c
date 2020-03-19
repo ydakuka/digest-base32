@@ -4,12 +4,12 @@
 #include "base32.h"
 #include <ctype.h>
 
-
-static VALUE m_B32;
-static VALUE e_DecodeError;
+static VALUE mDigest;
+static VALUE mDigest_cBase32;
+static VALUE eDecodeError;
 
 static VALUE
-b32_encode(int argc, VALUE* argv, VALUE self)
+digest_base32_encode(int argc, VALUE* argv, VALUE self)
 {
   VALUE input;
   const unsigned char* src;
@@ -30,7 +30,7 @@ b32_encode(int argc, VALUE* argv, VALUE self)
 }
 
 static VALUE
-b32_decode(int argc, VALUE *argv, VALUE self)
+digest_base32_decode(int argc, VALUE *argv, VALUE self)
 {
   VALUE input;
   const unsigned char* src;
@@ -53,10 +53,12 @@ b32_decode(int argc, VALUE *argv, VALUE self)
 }
 
 void
-Init_b32() {
-  m_B32 = rb_define_module("B32");
-    
-  e_DecodeError = rb_define_class_under(m_B32, "DecodeError", rb_eStandardError);
-  rb_define_module_function(m_B32, "encode", b32_encode, -1);
-  rb_define_module_function(m_B32, "decode", b32_decode, -1);
+Init_base32() {
+  mDigest = rb_define_module("Digest");
+  mDigest_cBase32 = rb_define_class_under(mDigest, "Base32", rb_cObject);
+
+  eDecodeError = rb_define_class_under(mDigest_cBase32, "DecodeError", rb_eStandardError);
+
+  rb_define_module_function(mDigest_cBase32, "encode", digest_base32_encode, -1);
+  rb_define_module_function(mDigest_cBase32, "decode", digest_base32_decode, -1);
 }
