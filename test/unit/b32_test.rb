@@ -30,7 +30,8 @@ describe 'B32' do
     it "returns the decoded string" do
       str = "hello world! 平仮名"
       encoded = B32.encode(str)
-      assert_equal str, B32.decode(encoded)
+      result = B32.decode(encoded)
+      assert_equal str.force_encoding("ASCII-8BIT"), result
     end
   end
 end
