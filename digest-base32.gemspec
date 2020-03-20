@@ -20,7 +20,7 @@ Gem::Specification.new do |spec|
   DESCRIPTION
 
   spec.metadata = {
-    'homepage_uri'    => 'https://github.com/ydakuka/digest-base32',
+    'homepage_uri' => 'https://github.com/ydakuka/digest-base32',
     'source_code_uri' => 'https://github.com/ydakuka/digest-base32',
     'bug_tracker_uri' =>
       'https://github.com/ydakuka/digest-base32/issues',
@@ -42,9 +42,12 @@ Gem::Specification.new do |spec|
 
   spec.extensions << 'ext/digest/base32/extconf.rb'
 
-  spec.add_development_dependency 'bundler',       '~> 2'
-  spec.add_development_dependency 'minitest',      '~> 5'
-  spec.add_development_dependency 'pry',           '~> 0.12'
-  spec.add_development_dependency 'rake',          '~> 12.3.3'
-  spec.add_development_dependency 'rake-compiler', '~> 1'
+  spec.add_development_dependency 'base32',              '~> 0.3.2'
+  spec.add_development_dependency 'bundler',             '~> 2.1'
+  spec.add_development_dependency 'pry',                 '~> 0.12'
+  spec.add_development_dependency 'rake',                '~> 12.3'
+  spec.add_development_dependency 'rake-compiler',       '~> 1.1'
+  spec.add_development_dependency 'rspec',               '~> 3.9'
+  spec.add_development_dependency 'rubocop',             '~> 0.80'
+  spec.add_development_dependency 'rubocop-performance', '~> 1.5'
 end

@@ -1,7 +1,7 @@
 Digest::Base32
 ==============
 
-![Travis Build](https://travis-ci.com/ydakuka/soundx.svg?branch=master)
+![Travis Build](https://travis-ci.com/ydakuka/digest-base32.svg?branch=master)
 
 Digest::Base32 is a Ruby native extension that wraps the base32 library found
 in [tpmtotop](https://github.com/mjg59/tpmtotp/blob/master/base32.h)
@@ -31,7 +31,7 @@ From Core i7 Macbook Pro (2014). Ruby 2.5.3
 Requirements
 ------------
 
-* Ruby 2.2+
+* Ruby 2.3+
 * gcc/clang
 
 Running the test suite

@@ -1,0 +1,60 @@
+require:
+  - rubocop-performance
+
+AllCops:
+  TargetRubyVersion: 2.3
+  DisplayCopNames: true
+
+Metrics/BlockLength:
+  Exclude:
+    - 'digest-base32.gemspec'
+    - 'spec/**/*'
+
+Layout/AccessModifierIndentation:
+  EnforcedStyle: outdent
+
+Lint/ReturnInVoidContext:
+  Enabled: false
+
+Style/AndOr:
+  EnforcedStyle: conditionals
+
+Style/AsciiComments:
+  Enabled: false
+
+Style/Documentation:
+  Enabled: false
+
+Style/DoubleNegation:
+  Enabled: false
+
+Style/FrozenStringLiteralComment:
+  Enabled: true
+  EnforcedStyle: always
+
+Style/HashEachMethods:
+  Enabled: true
+
+Style/HashTransformKeys:
+  Enabled: true
+
+Style/HashTransformValues:
+  Enabled: true
+
+Style/IfUnlessModifier:
+  Enabled: false
+
+Style/RegexpLiteral:
+  Enabled: false
+
+Style/RescueStandardError:
+  EnforcedStyle: implicit
+
+Style/TrailingCommaInArguments:
+  EnforcedStyleForMultiline: comma
+
+Style/TrailingCommaInArrayLiteral:
+  EnforcedStyleForMultiline: comma
+
+Style/TrailingCommaInHashLiteral:
+  EnforcedStyleForMultiline: comma
