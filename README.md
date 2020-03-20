@@ -6,14 +6,18 @@ Digest::Base32
 Digest::Base32 is a Ruby native extension that wraps the base32 library found
 in [tpmtotop](https://github.com/mjg59/tpmtotp/blob/master/base32.h)
 
-### Usage
+Usage
+-----
+
 ```ruby
-require 'digest-base32'
+require 'digest/base32'
+
 encoded = Digest::Base32.encode('My string')
 decoded = Digest::Base32.decode(encoded)
 ```
 
-### Benchmark
+Benchmark
+---------
 
 From Core i7 Macbook Pro (2014). Ruby 2.5.3
 ```
@@ -24,17 +28,17 @@ From Core i7 Macbook Pro (2014). Ruby 2.5.3
    base32 c extension (decode)   0.003613   0.000331   0.003944 (  0.003933)
 ```
 
-### Requirements
+Requirements
+------------
+
 * Ruby 2.2+
 * gcc/clang
 
-### Developing
+Running the test suite
+----------------------
 
-Simply make your changes and re-run the tests. Compilation is automatic.
+Run the test suite as follows:
+
 ```
 rake test
 ```
-
-### License
-
-MIT
