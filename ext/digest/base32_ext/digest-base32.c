@@ -53,7 +53,7 @@ digest_base32_decode(int argc, VALUE *argv, VALUE self)
 }
 
 void
-Init_base32() {
+Init_base32_ext() {
   mDigest = rb_define_module("Digest");
   mDigest_cBase32 = rb_define_class_under(mDigest, "Base32", rb_cObject);
 
