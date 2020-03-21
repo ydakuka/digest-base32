@@ -40,7 +40,7 @@ Gem::Specification.new do |spec|
 
   spec.executables = spec.files.grep %r{^exe/}, &File.method(:basename)
 
-  spec.extensions << 'ext/digest/base32/extconf.rb'
+  spec.extensions << 'ext/digest/base32_ext/extconf.rb'
 
   spec.add_development_dependency 'base32',              '~> 0.3.2'
   spec.add_development_dependency 'bundler',             '~> 2.1'

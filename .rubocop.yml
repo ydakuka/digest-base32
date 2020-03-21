@@ -5,10 +5,18 @@ AllCops:
   TargetRubyVersion: 2.3
   DisplayCopNames: true
 
+Metrics/AbcSize:
+  Exclude:
+    - 'lib/digest/base32.rb'
+
 Metrics/BlockLength:
   Exclude:
     - 'digest-base32.gemspec'
     - 'spec/**/*'
+
+Metrics/MethodLength:
+  Exclude:
+    - 'lib/digest/base32.rb'
 
 Layout/AccessModifierIndentation:
   EnforcedStyle: outdent

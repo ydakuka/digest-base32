@@ -4,7 +4,7 @@ require 'bundler/gem_tasks'
 require 'rake/extensiontask'
 
 spec = Gem::Specification.load('digest-base32.gemspec')
-Rake::ExtensionTask.new('digest/base32', spec)
+Rake::ExtensionTask.new('digest/base32_ext', spec)
 
 task default: %i[test lint]
 
