@@ -34,8 +34,7 @@ digest_base32_decode(int argc, VALUE *argv, VALUE self)
 {
   VALUE input;
   const unsigned char* src;
-  size_t input_len, estimate_len;
-
+  size_t estimate_len;
   rb_scan_args(argc, argv, "1", &input);
 
   if (TYPE(input) != T_STRING) {
@@ -43,10 +42,9 @@ digest_base32_decode(int argc, VALUE *argv, VALUE self)
   }
 
   src = (unsigned char*) StringValuePtr(input);
-  input_len = RSTRING_LEN(input);
-  estimate_len = UNBASE32_LEN(input_len);
-  unsigned char out[estimate_len];
+  estimate_len = UNBASE32_LEN(RSTRING_LEN(input));
 
+  unsigned char out[estimate_len];
   base32_decode(src, out);
 
   return rb_str_new_cstr((const char*) out);
